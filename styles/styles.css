@@ -1,0 +1,43 @@
+.list {
+	display       : flex;
+	flex-direction: column;
+	list-style    : none;
+	width         : auto;
+}
+
+.item {
+	cursor       : pointer;
+	transition   : font 0.3s linear;
+	margin-bottom: 5px;
+}
+
+.item-root.item-close {
+	display: block;
+}
+
+.list-close {
+	position: relative;
+	display : none;
+}
+
+.item-close,
+.item-open {
+	position: relative;
+}
+
+.item-close::before {
+	content : "\1F4C1";
+	position: absolute;
+	top     : 0;
+	left    : -5px;
+}
+
+.item-open::before {
+	content: "\1F4C2";
+}
+
+.item-icon {
+	display: inline-block;
+	width  : 14px;
+	height : 14px;
+}
